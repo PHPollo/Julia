@@ -13,7 +13,7 @@ function multiple(number::Int)
             total += loop
         end
     end
-    println("Los numeros que podemos encontrar desde el 1 al $number son: $list_number")
+    println("Los numeros que podemos encontrar desde el 1 al $number son: $(length(list_number))")
     println("El resultado de su suma es de $total")
 end
 
