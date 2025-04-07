@@ -61,6 +61,18 @@ function graphic_array(array::Array)
     Plots.plot(array, title="Grafico de array aleatorio")
 end
 
-graphic_array(array_sum)
+#graphic_array(array_sum)
 
-#println(maximum(array_sum))
+
+
+#Sume dos posiciones aleatorios utilice variables global y local.
+
+number1 = rand(array_sum)   #Global
+
+function number_rand(array::Array)
+    return rand(array)      #Local
+end
+
+number2 = number_rand(array_sum)
+
+println("El valor global es: $number1, mientras que el valor local es: $number2. Y su suma es $(number1 + number2)")
